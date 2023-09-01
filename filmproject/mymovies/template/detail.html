@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container-fluid">
+     <div class="row">
+         <div class="col-md-12">
+            <img src="{{movie.img.url}}" width="150" height="150">
+            {{movie.name}}<br>
+            {{movie.desc}}<br>
+            {{movie.year}}
+             <br>
+             <a class="btn btn-warning" href="{% url 'movies:update' movie.id %}">Edit</a>
+             <a class="btn btn-danger" href="{% url 'movies:delete' movie.id %}">Delete</a>
+         </div>
+     </div>
+</div>
+{% endblock %}

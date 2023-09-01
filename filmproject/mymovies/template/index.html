@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for i in movie %}
+<div class="container-fluid">
+     <div class="row">
+         <div class="col-md-12">
+             <img src="{{i.img.url}}" width="150" height="150">
+             <a href="{% url 'movies:detail' i.id %}">{{i.name}}</a>
+             <br><br>
+         </div>
+     </div>
+</div>
+{% endfor %}
+{% endblock %}
